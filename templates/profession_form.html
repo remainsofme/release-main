@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-9">
+    <h2>
+        Profession Information
+    </h2>
+    <form class="container" action="#" method="post" id="form2" name="form2">
+        <div class="mb-3 row">
+            <label for="profession" class="form-label col-4">Profession:</label>
+            <div class="col-8">
+                <input type="text" class="form-control" id="profession" name="profession" required size="20">
+            </div>
+        </div>
+    
+        <div class="mb-3 row">
+            <label for="company" class="form-label col-4">Company:</label>
+            <div class="col-8">
+                <input type="text" class="form-control" id="company" name="company" required size="20">
+            </div>
+        </div>
+    
+        <div class="mb-3 row">
+            <label for="branch" class="form-label col-4">Branch:</label>
+            <div class="col-8">
+                <input type="text" class="form-control" id="branch" name="branch" required size="20">
+            </div>
+        </div>
+    
+        <div class="mb-3 row">
+            <label for="address" class="form-label col-4">Address:</label>
+            <div class="col-8">
+                <input type="text" class="form-control" id="address" name="address" required size="20">
+            </div>
+        </div>
+    
+        <div class="mb-3 row">
+            <label for="phone" class="form-label col-4">Phone Number:</label>
+            <div class="col-8">
+                <input type="tel" class="form-control" id="phone" name="phone" required size="20">
+            </div>
+        </div>
+    
+        <div class="mb-3 row">
+            <label for="income" class="form-label col-4">Anual Income:</label>
+            <div class="col-8">
+                <input type="text" class="form-control" id="income" name="income" required size="20">
+            </div>
+        </div>
+    
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    
+</div>
+<div class="col-md-3">
+    <!-- Vertical navigation bar using Bootstrap list group -->
+    <div class="list-group position-fixed" style="height: 100vh;">
+        <a href="/personal_information_form" class="list-group-item list-group-item-action">Step 1: Personal Information</a>
+        <a href="profession_form" class="list-group-item list-group-item-action active">Step 2: Profession</a>
+        <a href="/related_person" class="list-group-item list-group-item-action">Step 3: Related person</a>
+        <a href="#" class="list-group-item list-group-item-action">Step 4: Marriage information</a>
+        <a href="#" class="list-group-item list-group-item-action">Step 5: Entry History</a>
+        <a href="#" class="list-group-item list-group-item-action">Step 6: Money</a>
+    </div>
+</div>
+</div>
+</div>
+
+<script src="/static/js/personal_info.js">
+</script>
+
+
+{% endblock %}

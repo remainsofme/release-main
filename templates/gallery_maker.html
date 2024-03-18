@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-4">
+    <div class="row">
+
+      <div class="col-md-6">
+        <!-- Second Container -->
+        <div class="card h-100">
+          <div class="card-body d-flex flex-column justify-content-center">
+            <label for="input_field" id="drop_area" class="text-center">
+               
+              <input type="file" accept="image/*" id="input_field" class="d-none" multiple="multiple">
+              <div id="img_view" class="mb-3">
+                <img src="/static/pictures/upload_icon.png" class="img-thumbnail" id="pic" style="width:auto; height: 400px;" rel="preload">
+              </div>
+              <p id="drop_area_text" class="mb-0">Drag and drop here<br>to upload an image</p>
+              
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <!-- First Container -->
+        <form>
+            <div class="form-group">
+                <label for="exampleFormControlTextarea1">入力してください</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+              </div>
+        </form>
+        <div class="">
+            <button class="btn btn-outline-primary" type="button" id="previous" value="previous" disabled="true">
+                前
+            </button>
+            <button class="btn btn-outline-primary" type="button" id="next" value="next" disabled="true" >
+                次
+            </button>
+        </div>
+        
+<div class="">
+    <button class="btn btn-outline-primary" type="button" id="submit" name="submit" value="submit" disabled="true">
+        作成
+    </button>
+    <div class="">
+      <img src="" id="progressing" style="height: 300px;width: auto;" rel="preload">
+    </div>
+    </div>
+        
+      </div>
+    </div>
+  </div>
+  
+  
+
+
+  <a id="download_link" download="result.pdf" href="/static/pdfs/result.pdf"></a>
+
+
+
+
+
+
+
+<script>
+    let data_transfer='{{picture_data|safe}}'
+    
+</script>
+
+<script src="/static/js/move_pic.js">
+</script>
+
+
+{% endblock %}

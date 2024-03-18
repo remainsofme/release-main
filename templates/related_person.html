@@ -1,0 +1,285 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-9">
+    <h2>
+        Related Person
+    </h2>
+    <form class="container" action="#" method="post" id="applicationForm" name="applicationForm">
+        <!-- Guarantor Section -->
+        <div id="guarantorSection">
+            <h2>Guarantor Information</h2>
+            <div class="mb-3 row">
+                <label for="guarantorName" class="form-label col-4">Name:</label>
+                <div class="col-8">
+                    <input type="text" class="form-control" id="guarantorName" name="guarantorName" required size="20">
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <label for="guarantorBirthday" class="form-label col-4">Birthday (YYYYMMDD):</label>
+                <div class="col-8">
+                    <input type="text" class="form-control" name="guarantorBirthday" id="guarantorBirthday" pattern="\d{8}" title="Please enter a valid date in YYYYMMDD format (e.g., 19981004)" required size="20">
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <label for="guarantorAddress" class="form-label col-4">Address:</label>
+                <div class="col-8">
+                    <input type="text" class="form-control" id="guarantorAddress" name="guarantorAddress" required size="20">
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <label for="guarantorProfession" class="form-label col-4">Profession:</label>
+                <div class="col-8">
+                    <input type="text" class="form-control" id="guarantorProfession" name="guarantorProfession" required size="20">
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <label for="guarantorPhoneNumber" class="form-label col-4">Telephone Number:</label>
+                <div class="col-8">
+                    <input type="tel" class="form-control" id="guarantorPhoneNumber" name="guarantorPhoneNumber" required size="20">
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <label for="guarantorRelation" class="form-label col-4">Relation with Applicant:</label>
+                <div class="col-8">
+                    <input type="text" class="form-control" id="guarantorRelation" name="guarantorRelation" required size="20">
+                </div>
+            </div>
+        </div>
+    
+        <!-- Legal Representative Section -->
+        <div id="legalRepresentativeSection">
+            <h2>Legal Representative Information</h2>
+            <div class="mb-3 row">
+                <label for="legalRepName" class="form-label col-4">Name:</label>
+                <div class="col-8">
+                    <input type="text" class="form-control" id="legalRepName" name="legalRepName" required size="20">
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <label for="legalRepBirthday" class="form-label col-4">Birthday (YYYYMMDD):</label>
+                <div class="col-8">
+                    <input type="text" class="form-control" name="legalRepBirthday" id="legalRepBirthday" pattern="\d{8}" title="Please enter a valid date in YYYYMMDD format (e.g., 19981004)" required size="20">
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <label for="legalRepAddress" class="form-label col-4">Address:</label>
+                <div class="col-8">
+                    <input type="text" class="form-control" id="legalRepAddress" name="legalRepAddress" required size="20">
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <label for="legalRepTelephoneNumber" class="form-label col-4">Telephone Number:</label>
+                <div class="col-8">
+                    <input type="tel" class="form-control" id="legalRepTelephoneNumber" name="legalRepTelephoneNumber" required size="20">
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <label for="legalRepRelation" class="form-label col-4">Relation with Applicant:</label>
+                <div class="col-8">
+                    <input type="text" class="form-control" id="legalRepRelation" name="legalRepRelation" required size="20">
+                </div>
+            </div>
+        </div>
+    
+        <!-- Supporter Section -->
+        <div id="supporterSection">
+            <h2>Supporter Information</h2>
+            <!-- Personal Information Subsection -->
+            <h3>Personal Information</h3>
+            <div class="mb-3 row">
+                <label for="supporterName" class="form-label col-4">Name:</label>
+                <div class="col-8">
+                    <input type="text" class="form-control" id="supporterName" name="supporterName" required size="20">
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <label for="supporterBirthday" class="form-label col-4">Birthday (YYYYMMDD):</label>
+                <div class="col-8">
+                    <input type="text" class="form-control" name="supporterBirthday" id="supporterBirthday" pattern="\d{8}" title="Please enter a valid date in YYYYMMDD format" required size="20">
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <label for="supporterNationality" class="form-label col-4">Nationality:</label>
+                <div class="col-8">
+                    <input type="text" class="form-control" id="supporterNationality" name="supporterNationality" required size="20">
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <label for="supporterResidenceCard" class="form-label col-4">Residence Card Number:</label>
+                <div class="col-8">
+                    <input type="text" class="form-control" id="supporterResidenceCard" name="supporterResidenceCard" required size="20">
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <label for="supporterResidenceStatus" class="form-label col-4">Residence Status:</label>
+                <div class="col-8">
+                    <input type="text" class="form-control" id="supporterResidenceStatus" name="supporterResidenceStatus" required size="20">
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <label for="supporterPeriodOfStay" class="form-label col-4">Period of Stay:</label>
+                <div class="col-8">
+                    <input type="text" class="form-control" id="supporterPeriodOfStay" name="supporterPeriodOfStay" required size="20">
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <label for="supporterDateOfExpiration" class="form-label col-4">Date of Expiration:</label>
+                <div class="col-8">
+                    <input type="text" class="form-control" id="supporterDateOfExpiration" name="supporterDateOfExpiration" required size="20">
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <label for="supporterRelationship" class="form-label col-4">Relationship with the Applicant:</label>
+                <div class="col-8">
+                    <input type="text" class="form-control" id="supporterRelationship" name="supporterRelationship" required size="20">
+                </div>
+            </div>
+            <!-- Profession Subsection -->
+            <h3>Profession</h3>
+            <div class="mb-3 row">
+                <label for="supporterEmployer" class="form-label col-4">Employer:</label>
+                <div class="col-8">
+                    <input type="text" class="form-control" id="supporterEmployer" name="supporterEmployer" required size="20">
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <label for="supporterBranch" class="form-label col-4">Branch (if possible):</label>
+                <div class="col-8">
+                    <input type="text" class="form-control" id="supporterBranch" name="supporterBranch" size="20">
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <label for="supporterAddress" class="form-label col-4">Address:</label>
+                <div class="col-8">
+                    <input type="text" class="form-control" id="supporterAddress" name="supporterAddress" required size="20">
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <label for="supporterTelephoneNumber" class="form-label col-4">Telephone Number:</label>
+                <div class="col-8">
+                    <input type="tel" class="form-control" id="supporterTelephoneNumber" name="supporterTelephoneNumber" required size="20">
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <label for="supporterAnnualIncome" class="form-label col-4">Annual Income:</label>
+                <div class="col-8">
+                    <input type="text" class="form-control" id="supporterAnnualIncome" name="supporterAnnualIncome" required size="20">
+                </div>
+            </div>
+        </div>
+    
+        <!-- Second Supporter Section -->
+        <div id="secondSupporterSection">
+            <h2>Second Supporter Information</h2>
+            <!-- Personal Information Subsection -->
+            <h3>Personal Information</h3>
+            <div class="mb-3 row">
+                <label for="secondSupporterName" class="form-label col-4">Name:</label>
+                <div class="col-8">
+                    <input type="text" class="form-control" id="secondSupporterName" name="secondSupporterName" required size="20">
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <label for="secondSupporterBirthday" class="form-label col-4">Birthday (YYYYMMDD):</label>
+                <div class="col-8">
+                    <input type="text" class="form-control" name="secondSupporterBirthday" id="secondSupporterBirthday" pattern="\d{8}" title="Please enter a valid date in YYYYMMDD format" required size="20">
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <label for="secondSupporterNationality" class="form-label col-4">Nationality:</label>
+                <div class="col-8">
+                    <input type="text" class="form-control" id="secondSupporterNationality" name="secondSupporterNationality" required size="20">
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <label for="secondSupporterResidenceCard" class="form-label col-4">Residence Card Number:</label>
+                <div class="col-8">
+                    <input type="text" class="form-control" id="secondSupporterResidenceCard" name="secondSupporterResidenceCard" required size="20">
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <label for="secondSupporterResidenceStatus" class="form-label col-4">Residence Status:</label>
+                <div class="col-8">
+                    <input type="text" class="form-control" id="secondSupporterResidenceStatus" name="secondSupporterResidenceStatus" required size="20">
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <label for="secondSupporterPeriodOfStay" class="form-label col-4">Period of Stay:</label>
+                <div class="col-8">
+                    <input type="text" class="form-control" id="secondSupporterPeriodOfStay" name="secondSupporterPeriodOfStay" required size="20">
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <label for="secondSupporterDateOfExpiration" class="form-label col-4">Date of Expiration:</label>
+                <div class="col-8">
+                    <input type="text" class="form-control" id="secondSupporterDateOfExpiration" name="secondSupporterDateOfExpiration" required size="20">
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <label for="secondSupporterRelationship" class="form-label col-4">Relationship with the Applicant:</label>
+                <div class="col-8">
+                    <input type="text" class="form-control" id="secondSupporterRelationship" name="secondSupporterRelationship" required size="20">
+                </div>
+            </div>
+           
+                <!-- Profession Subsection -->
+                <h3>Profession</h3>
+                <div class="mb-3 row">
+                    <label for="supporterEmployer" class="form-label col-4">Employer:</label>
+                    <div class="col-8">
+                        <input type="text" class="form-control" id="supporterEmployer" name="supporterEmployer" required size="20">
+                    </div>
+                </div>
+                <div class="mb-3 row">
+                    <label for="supporterBranch" class="form-label col-4">Branch (if possible):</label>
+                    <div class="col-8">
+                        <input type="text" class="form-control" id="supporterBranch" name="supporterBranch" size="20">
+                    </div>
+                </div>
+                <div class="mb-3 row">
+                    <label for="supporterAddress" class="form-label col-4">Address:</label>
+                    <div class="col-8">
+                        <input type="text" class="form-control" id="supporterAddress" name="supporterAddress" required size="20">
+                    </div>
+                </div>
+                <div class="mb-3 row">
+                    <label for="supporterTelephoneNumber" class="form-label col-4">Telephone Number:</label>
+                    <div class="col-8">
+                        <input type="tel" class="form-control" id="supporterTelephoneNumber" name="supporterTelephoneNumber" required size="20">
+                    </div>
+                </div>
+                <div class="mb-3 row">
+                    <label for="supporterAnnualIncome" class="form-label col-4">Annual Income:</label>
+                    <div class="col-8">
+                        <input type="text" class="form-control" id="supporterAnnualIncome" name="supporterAnnualIncome" required size="20">
+                    </div>
+                </div>
+            </div>
+        <button type="submit" class="btn btn-primary">Next</button>
+    </form>
+</div>
+
+
+<div class="col-md-3">
+    <!-- Vertical navigation bar using Bootstrap list group -->
+    <div class="list-group position-fixed" style="height: 100vh;">
+        <a href="/personal_information_form" class="list-group-item list-group-item-action ">Step 1: Personal Information</a>
+        <a href="profession_form" class="list-group-item list-group-item-action">Step 2: Profession</a>
+        <a href="/related_person" class="list-group-item list-group-item-action active">Step 3: Related person</a>
+        <a href="#" class="list-group-item list-group-item-action">Step 4: Marriage information</a>
+        <a href="#" class="list-group-item list-group-item-action">Step 5: Entry History</a>
+        <a href="#" class="list-group-item list-group-item-action">Step 6: Money</a>
+    </div>
+</div>
+</div>
+
+
+<script src="/static/js/personal_info.js">
+</script>
+
+
+{% endblock %}
